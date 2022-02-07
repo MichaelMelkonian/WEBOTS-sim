@@ -1,0 +1,103 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.20634609247331265 0.9769994932829615 0.053789220535642016 0.5214753457688598
+  position 1.382520266993934 3.277329124859487 16.64138947468619
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 -0.02 0
+  floorSize 100 100
+  floorTileSize 100 100
+}
+UnevenTerrain {
+  translation 0 -3.2 0
+}
+Fountain {
+  translation -20.36 0 14.39
+  radius 2.5
+}
+SumoInterface {
+}
+CurvedRoadSegment {
+  translation -20 0 0
+  rotation 0 1 0 0.78
+  name "road(2)"
+  numberOfLanes 20
+  speedLimit 30
+}
+Roundabout {
+  translation -20.5 0 14.45
+}
+SmallManor {
+  translation 43.39 0 33.12
+  rotation 0 1 0 -0.785395307179586
+}
+TexturedBackgroundLight {
+}
+Pedestrian {
+  translation -6.09529 1.27 -6.09528
+  rotation 0 1 0 -0.785395307179586
+}
+StraightRoadSegment {
+  translation -20 0 -14
+  rotation 0 1 0 0.78
+  name "road(1)"
+  speedLimit 30
+  lines [
+    RoadLine {
+      color 1 0 1
+    }
+  ]
+}
+RangeRoverSportSVRSimple {
+  translation -15.1726 0.4 -11.2014
+  rotation 0 1 0 0.785398
+  color 1 1 0.9
+  controllerArgs [
+    ""
+  ]
+}
+Church {
+  translation -2 0 -12
+  rotation 0 1 0 2.3558
+}
+AddLanesRoadSegment {
+  translation -11.2722 0 23.5815
+  rotation 0 1 0 0.78
+  length 100
+}
+Forest {
+  shape [
+    -50 -50
+    50 -50
+    50 50
+  ]
+}
+DEF Pill_Test Solid {
+  translation -22194.905943653263 1314.2209104481988 24698.493874638767
+  rotation -0.8435551654332805 -0.5234166462391225 -0.12020689377327855 2.1422106744002525
+  scale 10 10 10
+  children [
+    DEF Pill Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Capsule {
+        height 0.1
+        radius 0.05
+      }
+    }
+  ]
+  boundingObject USE Pill
+  physics Physics {
+    density 1
+  }
+}
